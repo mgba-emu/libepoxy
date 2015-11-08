@@ -33,20 +33,23 @@
 extern "C" {
 #endif
 
-#define EPOXY_SUPPORT_EGL 1
 
 #if defined _WIN32
 #define EPOXY_SUPPORT_GLX 0
 #define EPOXY_SUPPORT_WGL 1
+#define EPOXY_SUPPORT_EGL 0
 #elif defined __APPLE__
 #define EPOXY_SUPPORT_GLX 0
 #define EPOXY_SUPPORT_WGL 0
+#define EPOXY_SUPPORT_EGL 1
 #elif defined __ANDROID__
 #define EPOXY_SUPPORT_GLX 0
 #define EPOXY_SUPPORT_WGL 0
+#define EPOXY_SUPPORT_EGL 1
 #else
 #define EPOXY_SUPPORT_GLX 1
 #define EPOXY_SUPPORT_WGL 0
+#define EPOXY_SUPPORT_EGL 1
 #endif
 
 #ifdef __cplusplus
